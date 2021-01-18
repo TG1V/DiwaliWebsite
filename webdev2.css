@@ -1,31 +1,69 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-* {
+*,
+*:before,
+*:after {
   box-sizing: border-box; /*to fix sizing layout no need to add padding and border for the width*/
   margin: 0;
   padding: 0; /*remove padding */
   background-color: lightyellow;
+  -webkit-box-sizinf: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.container {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 1080px;
 }
 
 li,
 a,
 button {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 16px;
   color: #091f68;
   text-decoration: none;
+  list-style: none;
 }
 
-header {
+header,
+footer {
   display: flex; /*aligned text*/
   justify-content: space-between; /*distributes space between content items along flex container*/
   align-items: center;
-  padding: 10px 10%;
+  padding: 5px 3%;
+}
+
+h2 {
+  margin-bottom: 22px;
+  color: rgba(0, 136, 169, 0.8);
+}
+
+p,
+blockquote {
+  margin: 10px 0;
+  padding: 5px;
+  font-family: sans-serif;
+  font-weight: 1;
+  text-align: justify;
+  color: rgba(40, 0, 0, 0.614);
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
 }
 
 .logo {
   cursor: pointer;
+  margin: 20px;
 }
 
 .nav__links li {
@@ -45,11 +83,11 @@ header {
   color: #099;
 }
 
-.burger {
+.gato {
   display: none;
   cursor: pointer;
 }
-.burger div {
+.gato div {
   width: 25px;
   height: 3px;
   background-color: rgba(0, 136, 169, 1);
@@ -98,11 +136,31 @@ button:hover {
     opacity: 0;
   }
 
-  .burger {
+  .gato {
     display: block;
   }
 }
 
 .nav-active {
   transform: translateX(0%);
+}
+.footer {
+  margin: 500px 0% 100px 200px;
+  display: flex;
+}
+
+.Light {
+  padding: 80px 86px 66px 80px;
+  box-sizing: border-box;
+  background: url(poojapic.jpeg);
+  background-size: cover;
+}
+
+.prayer-div {
+  display: block;
+  box-sizing: border-box;
+}
+
+.img-pooja {
+  text-align: center;
 }
